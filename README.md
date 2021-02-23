@@ -17,6 +17,7 @@ This forked repo adds an extra data string to listing applications. This means t
 The only environmental dependency you need is Node. Presently we can guarantee this all works with Node 8.
 ```
 npm install
+npm run install
 npm run compile
 ```
 
@@ -48,3 +49,8 @@ You can use [https://iancoleman.io/bip39/](https://iancoleman.io/bip39/) to gene
 ## Packages
 The repo consumes several EPM packages. `dll` and `attrstore` are libraries used in PLCRVoting's doubly-linked list abstraction. `tokens` provides an ERC20-comaptible token implementation. All packages are installed automatically when running `npm install`.
 
+## Deployment
+
+* edit tcr/conf/config.json
+* npm run deploy-zosma
+* npm run deploy-proxies:zosma

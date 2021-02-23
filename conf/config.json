@@ -1,7 +1,7 @@
 {
   "paramDefaults": {
-    "minDeposit": 10000000000000000000,
-    "pMinDeposit": 100000000000000000000,
+    "minDeposit": "10000000000000000000",
+    "pMinDeposit": "100000000000000000000",
     "applyStageLength": 600,
     "pApplyStageLength": 1200,
     "commitStageLength": 600,
@@ -16,15 +16,14 @@
   "name": "The TestChain Registry",
   "token": {
     "supply": "1000000000000000000000000000",
-    "name": "TestCoin",
+    "name": "TCRToken",
     "decimals": "18",
-    "symbol": "TEST",
+    "symbol": "TCRT",
     "tokenHolders": [
-      "0x627306090abaB3A6e1400e9345bC60c78a8BEf57",
-      "0xf17f52151EbEF6C7334FAD080c5704D77216b732",
-      "0xC5fdf4076b8F3A5357c5E395ab970B5B54098Fef",
-      "0x821aEa9a577a9b44299B9c15c88cf3087F3b5544",
-      "0xd09cc3bc67e4294c4a446d8e4a2934a921410ed7"
+      "0xF35960302a07022aBa880DFFaEC2Fdd64d5BF1c1",
+      "0x70F264A331a9C3B3248537aCf2470D963be741e3",
+      "0xCacEc54Bad0B6Cc6735e9721151fb1e37299a311",
+      "0x50E6A11b89376157816CF77b04448E01b5ba9D3C"
     ]
   }
 }

@@ -1,4 +1,4 @@
-const HDWalletProvider = require('truffle-hdwallet-provider');
+const HDWalletProvider = require("@truffle/hdwallet-provider");
 const fs = require('fs');
 
 let mnemonic = '';
@@ -22,9 +22,14 @@ if (mnemonic.includes('candy maple cake') && process.argv[4] === 'mainnet') {
 }
 
 module.exports = {
+  compilers: {
+    solc: {
+      version: "^0.4.11"
+    }
+  },
   networks: {
     mainnet: {
-      provider: () => new HDWalletProvider(mnemonic, 'https://mainnet.infura.io'),
+      provider: () => new HDWalletProvider(mnemonic, 'https://mainnet.infura.io/v3/' + INFURA_API),
       network_id: '1',
       gas: 6500000,
       gasPrice: 10000000000,
@@ -36,7 +41,19 @@ module.exports = {
       gasPrice: 25000000000,
     },
     rinkeby: {
-      provider: () => new HDWalletProvider(mnemonic, 'https://rinkeby.infura.io'),
+      provider: () => new HDWalletProvider(mnemonic, 'https://rinkeby.infura.io/v3/' + INFURA_API),
+      network_id: '*',
+      gas: 6500000,
+      gasPrice: 25000000000,
+    },
+    goerli: {
+      provider: () => new HDWalletProvider(mnemonic, 'https://goerli.infura.io/v3/' + INFURA_API),
+      network_id: '*',
+      gas: 6500000,
+      gasPrice: 25000000000,
+    },
+    zosma: {
+      provider: () => new HDWalletProvider(mnemonic, 'http://zosma-openethereum.dappnode:8545'),
       network_id: '*',
       gas: 6500000,
       gasPrice: 25000000000,
